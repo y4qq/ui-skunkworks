@@ -4,6 +4,7 @@ import { ShowcaseContent } from "./showcase-content"
 import { registry } from "./component-registry"
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { Toaster } from "@/components/ui/sonner"
+import { SidebarProvider, SidebarInset } from "@/components/ui/sidebar"
 
 function getInitialId() {
   const hash = window.location.hash.slice(1)
@@ -38,10 +39,12 @@ export function ShowcaseLayout() {
 
   return (
     <TooltipProvider>
-      <div className="bg-background flex h-screen overflow-hidden">
+      <SidebarProvider>
         <ShowcaseSidebar activeId={activeId} onNavigate={navigate} />
-        <ShowcaseContent activeId={activeId} />
-      </div>
+        <SidebarInset>
+          <ShowcaseContent activeId={activeId} />
+        </SidebarInset>
+      </SidebarProvider>
       <Toaster />
     </TooltipProvider>
   )

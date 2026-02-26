@@ -65,6 +65,13 @@ export const registry: ComponentEntry[] = [
 
   // Navigation
   {
+    id: "sidebar",
+    name: "Sidebar",
+    description: "A composable, collapsible sidebar with groups, menus, and sub-menus.",
+    category: "Navigation",
+    component: lazy(() => import("@/components/demos/sidebar-demo")),
+  },
+  {
     id: "breadcrumb",
     name: "Breadcrumb",
     description: "Displays the path to the current page.",
