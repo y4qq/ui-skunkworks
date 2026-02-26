@@ -24,6 +24,12 @@ export function ShowcaseLayout() {
       const hash = window.location.hash.slice(1)
       if (hash && registry.some((c) => c.id === hash)) {
         setActiveId(hash)
+      } else {
+        const fallback = registry[0]?.id ?? ""
+        if (fallback) {
+          setActiveId(fallback)
+          history.replaceState(null, "", `#${fallback}`)
+        }
       }
     }
     window.addEventListener("hashchange", onHashChange)

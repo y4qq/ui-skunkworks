@@ -1717,11 +1717,9 @@ function DefaultVariantItemsWithImage() {
     <Example title="Default - ItemMedia image">
       <Item>
         <ItemMedia variant="image">
-          <Image
+          <img
             src="https://avatar.vercel.sh/Project"
             alt="Project"
-           
-           
             className="object-cover grayscale"
           />
         </ItemMedia>
@@ -1734,11 +1732,9 @@ function DefaultVariantItemsWithImage() {
       </Item>
       <Item>
         <ItemMedia variant="image">
-          <Image
+          <img
             src="https://avatar.vercel.sh/Document"
             alt="Document"
-           
-           
             className="object-cover grayscale"
           />
         </ItemMedia>
@@ -1754,11 +1750,9 @@ function DefaultVariantItemsWithImage() {
       </Item>
       <Item>
         <ItemMedia variant="image">
-          <Image
+          <img
             src="https://avatar.vercel.sh/File"
             alt="File"
-           
-           
             className="object-cover grayscale"
           />
         </ItemMedia>
@@ -1781,11 +1775,9 @@ function OutlineVariantItemsWithImage() {
     <Example title="Outline - ItemMedia image">
       <Item variant="outline">
         <ItemMedia variant="image">
-          <Image
+          <img
             src="https://avatar.vercel.sh/Project"
             alt="Project"
-           
-           
             className="object-cover grayscale"
           />
         </ItemMedia>
@@ -1798,11 +1790,9 @@ function OutlineVariantItemsWithImage() {
       </Item>
       <Item variant="outline">
         <ItemMedia variant="image">
-          <Image
+          <img
             src="https://avatar.vercel.sh/Document"
             alt="Document"
-           
-           
             className="object-cover grayscale"
           />
         </ItemMedia>
@@ -1818,11 +1808,9 @@ function OutlineVariantItemsWithImage() {
       </Item>
       <Item variant="outline">
         <ItemMedia variant="image">
-          <Image
+          <img
             src="https://avatar.vercel.sh/File"
             alt="File"
-           
-           
             className="object-cover grayscale"
           />
         </ItemMedia>
@@ -1845,11 +1833,9 @@ function OutlineVariantItemsWithImageSmall() {
     <Example title="Outline - ItemMedia image - Small">
       <Item variant="outline" size="sm">
         <ItemMedia variant="image">
-          <Image
+          <img
             src="https://avatar.vercel.sh/Project"
             alt="Project"
-           
-           
             className="object-cover grayscale"
           />
         </ItemMedia>
@@ -1862,11 +1848,9 @@ function OutlineVariantItemsWithImageSmall() {
       </Item>
       <Item variant="outline" size="sm">
         <ItemMedia variant="image">
-          <Image
+          <img
             src="https://avatar.vercel.sh/Document"
             alt="Document"
-           
-           
             className="object-cover grayscale"
           />
         </ItemMedia>
@@ -1882,11 +1866,9 @@ function OutlineVariantItemsWithImageSmall() {
       </Item>
       <Item variant="outline" size="sm">
         <ItemMedia variant="image">
-          <Image
+          <img
             src="https://avatar.vercel.sh/File"
             alt="File"
-           
-           
             className="object-cover grayscale"
           />
         </ItemMedia>
@@ -1909,11 +1891,9 @@ function OutlineVariantItemsWithImageExtraSmall() {
     <Example title="Outline - ItemMedia image - Extra Small">
       <Item variant="outline" size="xs">
         <ItemMedia variant="image">
-          <Image
+          <img
             src="https://avatar.vercel.sh/Project"
             alt="Project"
-           
-           
             className="object-cover grayscale"
           />
         </ItemMedia>
@@ -1923,11 +1903,9 @@ function OutlineVariantItemsWithImageExtraSmall() {
       </Item>
       <Item variant="outline" size="xs">
         <ItemMedia variant="image">
-          <Image
+          <img
             src="https://avatar.vercel.sh/Document"
             alt="Document"
-           
-           
             className="object-cover grayscale"
           />
         </ItemMedia>
@@ -1942,11 +1920,9 @@ function OutlineVariantItemsWithImageExtraSmall() {
       </Item>
       <Item variant="outline" size="xs">
         <ItemMedia variant="image">
-          <Image
+          <img
             src="https://avatar.vercel.sh/File"
             alt="File"
-           
-           
             className="object-cover grayscale"
           />
         </ItemMedia>
@@ -1966,11 +1942,9 @@ function MutedVariantItemsWithImage() {
     <Example title="Muted - ItemMedia image">
       <Item variant="muted">
         <ItemMedia variant="image">
-          <Image
+          <img
             src="https://avatar.vercel.sh/Project"
             alt="Project"
-           
-           
             className="object-cover grayscale"
           />
         </ItemMedia>
@@ -1983,11 +1957,9 @@ function MutedVariantItemsWithImage() {
       </Item>
       <Item variant="muted">
         <ItemMedia variant="image">
-          <Image
+          <img
             src="https://avatar.vercel.sh/Document"
             alt="Document"
-           
-           
             className="object-cover grayscale"
           />
         </ItemMedia>
@@ -2003,11 +1975,9 @@ function MutedVariantItemsWithImage() {
       </Item>
       <Item variant="muted">
         <ItemMedia variant="image">
-          <Image
+          <img
             src="https://avatar.vercel.sh/File"
             alt="File"
-           
-           
             className="object-cover grayscale"
           />
         </ItemMedia>

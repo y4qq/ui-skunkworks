@@ -19,6 +19,7 @@ export default function SwitchDemo() {
       <SwitchWithDescription />
       <SwitchDisabled />
       <SwitchSizes />
+      <SwitchWithLabel />
     </ExampleWrapper>
   )
 }

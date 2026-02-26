@@ -61,12 +61,10 @@ function ScrollAreaHorizontal() {
           {works.map((artwork) => (
             <figure key={artwork.artist} className="shrink-0">
               <div className="overflow-hidden rounded-md">
-                <Image
+                <img
                   src={artwork.art}
                   alt={`Photo by ${artwork.artist}`}
                   className="aspect-[3/4] h-fit w-fit object-cover"
-                 
-                 
                 />
               </div>
               <figcaption className="text-muted-foreground pt-2 text-xs">
