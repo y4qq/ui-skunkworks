@@ -1,4 +1,10 @@
-import { Example } from "@/components/example"
+"use client"
+
+import {
+  Example,
+  ExampleWrapper,
+} from "@/components/example"
+import { Button } from "@/components/ui/button"
 import {
   Drawer,
   DrawerClose,
@@ -9,40 +15,108 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer"
-import { Button } from "@/components/ui/button"
 
 export default function DrawerDemo() {
   return (
-    <>
-      <Example title="Bottom Drawer">
-        <Drawer>
-          <DrawerTrigger asChild>
-            <Button variant="outline">Open Drawer</Button>
-          </DrawerTrigger>
-          <DrawerContent>
-            <DrawerHeader>
-              <DrawerTitle>Move Goal</DrawerTitle>
-              <DrawerDescription>Set your daily activity goal.</DrawerDescription>
-            </DrawerHeader>
-            <div className="p-4 pb-0">
-              <div className="flex items-center justify-center space-x-2">
-                <div className="flex-1 text-center">
-                  <div className="text-7xl font-bold tracking-tighter">350</div>
-                  <div className="text-muted-foreground text-[0.70rem] uppercase">
-                    Calories/day
-                  </div>
-                </div>
+    <ExampleWrapper>
+      <DrawerScrollableContent />
+      <DrawerWithSides />
+    </ExampleWrapper>
+  )
+}
+
+const DRAWER_SIDES = ["top", "right", "bottom", "left"] as const
+
+function DrawerWithSides() {
+  return (
+    <Example title="Sides">
+      <div className="flex flex-wrap gap-2">
+        {DRAWER_SIDES.map((side) => (
+          <Drawer
+            key={side}
+            direction={
+              side === "bottom" ? undefined : (side as "top" | "right" | "left")
+            }
+          >
+            <DrawerTrigger asChild>
+              <Button variant="outline" className="capitalize">
+                {side}
+              </Button>
+            </DrawerTrigger>
+            <DrawerContent className="data-[vaul-drawer-direction=bottom]:max-h-[50vh] data-[vaul-drawer-direction=top]:max-h-[50vh]">
+              <DrawerHeader>
+                <DrawerTitle>Move Goal</DrawerTitle>
+                <DrawerDescription>
+                  Set your daily activity goal.
+                </DrawerDescription>
+              </DrawerHeader>
+              <div className="no-scrollbar overflow-y-auto px-4">
+                {Array.from({ length: 10 }).map((_, index) => (
+                  <p
+                    key={index}
+                    className="style-lyra:mb-2 style-lyra:leading-relaxed mb-4 leading-normal"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.
+                  </p>
+                ))}
               </div>
-            </div>
-            <DrawerFooter>
-              <Button>Submit</Button>
-              <DrawerClose asChild>
-                <Button variant="outline">Cancel</Button>
-              </DrawerClose>
-            </DrawerFooter>
-          </DrawerContent>
-        </Drawer>
-      </Example>
-    </>
+              <DrawerFooter>
+                <Button>Submit</Button>
+                <DrawerClose asChild>
+                  <Button variant="outline">Cancel</Button>
+                </DrawerClose>
+              </DrawerFooter>
+            </DrawerContent>
+          </Drawer>
+        ))}
+      </div>
+    </Example>
+  )
+}
+
+function DrawerScrollableContent() {
+  return (
+    <Example title="Scrollable Content">
+      <Drawer direction="right">
+        <DrawerTrigger asChild>
+          <Button variant="outline">Scrollable Content</Button>
+        </DrawerTrigger>
+        <DrawerContent>
+          <DrawerHeader>
+            <DrawerTitle>Move Goal</DrawerTitle>
+            <DrawerDescription>Set your daily activity goal.</DrawerDescription>
+          </DrawerHeader>
+          <div className="no-scrollbar overflow-y-auto px-4">
+            {Array.from({ length: 10 }).map((_, index) => (
+              <p
+                key={index}
+                className="style-lyra:mb-2 style-lyra:leading-relaxed mb-4 leading-normal"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            ))}
+          </div>
+          <DrawerFooter>
+            <Button>Submit</Button>
+            <DrawerClose asChild>
+              <Button variant="outline">Cancel</Button>
+            </DrawerClose>
+          </DrawerFooter>
+        </DrawerContent>
+      </Drawer>
+    </Example>
   )
 }
