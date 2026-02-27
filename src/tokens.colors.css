@@ -1,0 +1,309 @@
+/* =============================================================================
+   Design Tokens — generated from brand JSON
+   All colors expressed in oklch() for perceptual uniformity.
+   Structure:
+     1. Base (primitive palette)
+     2. Semantic — light mode
+     3. Semantic — dark mode (placeholder)
+     4. Spacing
+     5. Border radius
+     6. Typography
+   ============================================================================= */
+
+/* ─── 1. Base palette (:root) ───────────────────────────────────────────────── */
+:root {
+
+  /* Grays */
+  --base-gray-01: oklch(1 0 89.88);
+  --base-gray-02: oklch(0.9761 0 89.88);
+  --base-gray-03: oklch(0.9642 0 89.88);
+  --base-gray-04: oklch(0.9219 0 89.88);
+  --base-gray-05: oklch(0.8853 0 89.88);
+  --base-gray-06: oklch(0.8452 0 89.88);
+  --base-gray-07: oklch(0.8047 0 89.88);
+  --base-gray-08: oklch(0.7252 0 89.88);
+  --base-gray-09: oklch(0.6698 0 89.88);
+  --base-gray-10: oklch(0.6066 0 89.88);
+  --base-gray-11: oklch(0.5417 0 89.88);
+  --base-gray-12: oklch(0.4748 0 89.88);
+  --base-gray-13: oklch(0.4202 0 89.88);
+  --base-gray-14: oklch(0.3329 0 89.88);
+  --base-gray-15: oklch(0.2686 0 89.88);
+  --base-gray-16: oklch(0.2134 0 89.88);
+
+  /* Blues */
+  --base-blue-01: oklch(0.9723 0.0074 260.73);
+  --base-blue-02: oklch(0.9504 0.0178 261.34);
+  --base-blue-03: oklch(0.9085 0.0413 259.65);
+  --base-blue-04: oklch(0.8171 0.0851 261.72);
+  --base-blue-05: oklch(0.7115 0.1332 263.41);
+  --base-blue-06: oklch(0.6234 0.1674 264.43);
+  --base-blue-07: oklch(0.5051 0.2174 263.98);
+  --base-blue-08: oklch(0.4364 0.2018 264.58);
+  --base-blue-09: oklch(0.3729 0.1831 265.06);
+  --base-blue-10: oklch(0.3111 0.1611 265.45);
+  --base-blue-11: oklch(0.2667 0.1442 265.47);
+  --base-blue-12: oklch(0.1809 0.0773 260.83);
+
+  /* Greens */
+  --base-green-01: oklch(0.9949 0.0084 145.51);
+  --base-green-02: oklch(0.9772 0.0299 129.73);
+  --base-green-03: oklch(0.9624 0.0569 130.08);
+  --base-green-04: oklch(0.9268 0.1145 133.65);
+  --base-green-05: oklch(0.8672 0.1657 136.75);
+  --base-green-06: oklch(0.7971 0.1916 139.22);
+  --base-green-07: oklch(0.7125 0.2168 141.1);
+  --base-green-08: oklch(0.6309 0.1989 142.06);
+  --base-green-09: oklch(0.5515 0.1781 142.68);
+  --base-green-10: oklch(0.4718 0.1499 143.43);
+  --base-green-11: oklch(0.4138 0.1278 144.52);
+  --base-green-12: oklch(0.2806 0.0915 140.58);
+
+  /* Oranges */
+  --base-orange-01: oklch(0.9928 0.0042 56.38);
+  --base-orange-02: oklch(0.9744 0.0304 88.37);
+  --base-orange-03: oklch(0.9599 0.0504 89.76);
+  --base-orange-04: oklch(0.9159 0.094 87.31);
+  --base-orange-05: oklch(0.866 0.1305 81.64);
+  --base-orange-06: oklch(0.8201 0.1497 74.18);
+  --base-orange-07: oklch(0.7549 0.174 61.29);
+  --base-orange-08: oklch(0.6562 0.1596 56.13);
+  --base-orange-09: oklch(0.5629 0.1432 52.65);
+  --base-orange-10: oklch(0.471 0.1262 48.81);
+  --base-orange-11: oklch(0.4016 0.1131 45.9);
+  --base-orange-12: oklch(0.2516 0.0552 68.01);
+
+  /* Reds */
+  --base-red-01: oklch(0.9928 0.0042 56.38);
+  --base-red-02: oklch(0.964 0.0219 58.79);
+  --base-red-03: oklch(0.9381 0.0382 58.43);
+  --base-red-04: oklch(0.866 0.079 48.19);
+  --base-red-05: oklch(0.7887 0.1271 40.34);
+  --base-red-06: oklch(0.7234 0.1733 33.46);
+  --base-red-07: oklch(0.6502 0.2365 30.6);
+  --base-red-08: oklch(0.4957 0.1944 26.32);
+  --base-red-09: oklch(0.4601 0.1763 25.95);
+  --base-red-10: oklch(0.4228 0.1647 22.88);
+  --base-red-11: oklch(0.3725 0.1448 18.67);
+  --base-red-12: oklch(0.2097 0.0755 33.95);
+
+  /* Transparent blacks */
+  --base-black-alpha-01: oklch(0.3329 0 89.88 / 0%);
+  --base-black-alpha-02: oklch(0.3329 0 89.88 / 5%);
+  --base-black-alpha-03: oklch(0.3329 0 89.88 / 10%);
+  --base-black-alpha-04: oklch(0.3329 0 89.88 / 15%);
+  --base-black-alpha-05: oklch(0.3329 0 89.88 / 20%);
+  --base-black-alpha-06: oklch(0.3329 0 89.88 / 35%);
+  --base-black-alpha-07: oklch(0.3329 0 89.88 / 45%);
+  --base-black-alpha-08: oklch(0.3329 0 89.88 / 50%);
+  --base-black-alpha-09: oklch(0.3329 0 89.88 / 55%);
+  --base-black-alpha-10: oklch(0.3329 0 89.88 / 60%);
+  --base-black-alpha-11: oklch(0.3329 0 89.88 / 65%);
+  --base-black-alpha-12: oklch(0.3329 0 89.88 / 70%);
+  --base-black-alpha-13: oklch(0.3329 0 89.88 / 75%);
+  --base-black-alpha-14: oklch(0.3329 0 89.88 / 80%);
+  --base-black-alpha-15: oklch(0.3329 0 89.88 / 85%);
+  --base-black-alpha-16: oklch(0.3329 0 89.88 / 90%);
+
+  /* Transparent whites */
+  --base-white-alpha-01: oklch(1 0 89.88 / 0%);
+  --base-white-alpha-02: oklch(1 0 89.88 / 5%);
+  --base-white-alpha-03: oklch(1 0 89.88 / 10%);
+  --base-white-alpha-04: oklch(1 0 89.88 / 15%);
+  --base-white-alpha-05: oklch(1 0 89.88 / 20%);
+  --base-white-alpha-06: oklch(1 0 89.88 / 35%);
+  --base-white-alpha-07: oklch(1 0 89.88 / 45%);
+  --base-white-alpha-08: oklch(1 0 89.88 / 50%);
+  --base-white-alpha-09: oklch(1 0 89.88 / 55%);
+  --base-white-alpha-10: oklch(1 0 89.88 / 60%);
+  --base-white-alpha-11: oklch(1 0 89.88 / 65%);
+  --base-white-alpha-12: oklch(1 0 89.88 / 70%);
+  --base-white-alpha-13: oklch(1 0 89.88 / 75%);
+  --base-white-alpha-14: oklch(1 0 89.88 / 80%);
+  --base-white-alpha-15: oklch(1 0 89.88 / 85%);
+  --base-white-alpha-16: oklch(1 0 89.88 / 90%);
+}
+
+/* ─── 2. Semantic tokens — light mode (:root) ───────────────────────────────── */
+:root {
+
+  /* ── Background ── */
+  --bg-default: oklch(1 0 89.88);
+  --bg-subtle: oklch(0.9761 0 89.88);
+  --bg-strong: oklch(0.9219 0 89.88);
+  --bg-elevated: oklch(0.9642 0 89.88);
+  --bg-disabled: oklch(0.3329 0 89.88 / 5%);
+  --bg-contrast: oklch(0.2134 0 89.88);
+  --bg-sidebar: oklch(0.9642 0 89.88);
+
+  /* ── Text ── */
+  --text-default: oklch(0.2134 0 89.88);
+  --text-subtle: oklch(0.4202 0 89.88);
+  --text-minimal: oklch(0.5417 0 89.88);
+  --text-muted: oklch(0.6066 0 89.88);
+  --text-disabled: oklch(0.3329 0 89.88 / 50%);
+  --text-contrast: oklch(1 0 89.88);
+  --text-brand: oklch(0.5051 0.2174 263.98);
+  --text-destructive: oklch(0.4601 0.1763 25.95);
+  --text-warning: oklch(0.6562 0.1596 56.13);
+  --text-success: oklch(0.6309 0.1989 142.06);
+
+  /* ── Icon ── */
+  --icon-default: oklch(0.2134 0 89.88);
+  --icon-subtle: oklch(0.4202 0 89.88);
+  --icon-minimal: oklch(0.5417 0 89.88);
+  --icon-muted: oklch(0.6066 0 89.88);
+  --icon-disabled: oklch(0.3329 0 89.88 / 50%);
+  --icon-contrast: oklch(1 0 89.88);
+  --icon-destructive: oklch(0.4601 0.1763 25.95);
+  --icon-warning: oklch(0.6562 0.1596 56.13);
+  --icon-success: oklch(0.6309 0.1989 142.06);
+
+  /* ── Border ── */
+  --border-default: oklch(0.9219 0 89.88);
+  --border-subtle: oklch(0.9642 0 89.88);
+  --border-minimal: oklch(0.3329 0 89.88 / 10%);
+  --border-disabled: oklch(0.3329 0 89.88 / 5%);
+  --border-contrast: oklch(0.2134 0 89.88);
+
+  /* ── Action — Neutral ── */
+  --action-primary: oklch(0.2134 0 89.88);
+  --action-primary-hover: oklch(0.2686 0 89.88);
+  --action-primary-pressed: oklch(0.3329 0 89.88);
+  --action-primary-disabled: oklch(0.3329 0 89.88 / 10%);
+  --action-secondary: oklch(1 0 89.88);
+  --action-secondary-hover: oklch(0.9761 0 89.88);
+  --action-secondary-pressed: oklch(0.9642 0 89.88);
+  --action-secondary-disabled: oklch(0.3329 0 89.88 / 10%);
+
+  /* ── Action — Brand (blue) ── */
+  --action-brand-primary: oklch(0.5051 0.2174 263.98);
+  --action-brand-primary-hover: oklch(0.4364 0.2018 264.58);
+  --action-brand-primary-pressed: oklch(0.3729 0.1831 265.06);
+  --action-brand-primary-disabled: oklch(0.3329 0 89.88 / 15%);
+  --action-brand-secondary: oklch(0.9085 0.0413 259.65);
+  --action-brand-secondary-hover: oklch(0.8171 0.0851 261.72);
+  --action-brand-secondary-pressed: oklch(0.7115 0.1332 263.41);
+  --action-brand-secondary-disabled: oklch(0.3329 0 89.88 / 5%);
+
+  /* ── Action — Success (green) ── */
+  --action-success-primary: oklch(0.6309 0.1989 142.06);
+  --action-success-primary-hover: oklch(0.5515 0.1781 142.68);
+  --action-success-primary-pressed: oklch(0.4718 0.1499 143.43);
+  --action-success-primary-disabled: oklch(0.3329 0 89.88 / 15%);
+  --action-success-secondary: oklch(0.9772 0.0299 129.73);
+  --action-success-secondary-hover: oklch(0.9624 0.0569 130.08);
+  --action-success-secondary-pressed: oklch(0.9268 0.1145 133.65);
+  --action-success-secondary-disabled: oklch(0.3329 0 89.88 / 5%);
+
+  /* ── Action — Warning (orange) ── */
+  --action-warning-primary: oklch(0.6562 0.1596 56.13);
+  --action-warning-primary-hover: oklch(0.5629 0.1432 52.65);
+  --action-warning-primary-pressed: oklch(0.471 0.1262 48.81);
+  --action-warning-primary-disabled: oklch(0.3329 0 89.88 / 15%);
+  --action-warning-secondary: oklch(0.9744 0.0304 88.37);
+  --action-warning-secondary-hover: oklch(0.9599 0.0504 89.76);
+  --action-warning-secondary-pressed: oklch(0.9159 0.094 87.31);
+  --action-warning-secondary-disabled: oklch(0.3329 0 89.88 / 5%);
+
+  /* ── Action — Destructive / Error (red) ── */
+  --action-destructive-primary: oklch(0.4601 0.1763 25.95);
+  --action-destructive-primary-hover: oklch(0.4228 0.1647 22.88);
+  --action-destructive-primary-pressed: oklch(0.3725 0.1448 18.67);
+  --action-destructive-primary-disabled: oklch(0.3329 0 89.88 / 10%);
+
+  /* ── Alert — Error ── */
+  --alert-error-bg-subtle: oklch(0.964 0.0219 58.79);
+  --alert-error-bg-surface: oklch(0.9381 0.0382 58.43);
+  --alert-error-bg-accent: oklch(0.7234 0.1733 33.46);
+  --alert-error-bg-strong: oklch(0.4957 0.1944 26.32);
+  --alert-error-bg-contrast: oklch(0.2097 0.0755 33.95);
+  --alert-error-border: oklch(0.3329 0 89.88 / 10%);
+  --alert-error-text: oklch(0.3725 0.1448 18.67);
+  --alert-error-icon: oklch(0.3725 0.1448 18.67);
+
+  /* ── Alert — Warning ── */
+  --alert-warning-bg-subtle: oklch(0.9744 0.0304 88.37);
+  --alert-warning-bg-surface: oklch(0.9599 0.0504 89.76);
+  --alert-warning-bg-accent: oklch(0.8201 0.1497 74.18);
+  --alert-warning-bg-strong: oklch(0.7549 0.174 61.29);
+  --alert-warning-bg-contrast: oklch(0.2516 0.0552 68.01);
+  --alert-warning-border: oklch(0.3329 0 89.88 / 10%);
+  --alert-warning-text: oklch(0.4016 0.1131 45.9);
+  --alert-warning-icon: oklch(0.4016 0.1131 45.9);
+
+  /* ── Alert — Success ── */
+  --alert-success-bg-subtle: oklch(0.9772 0.0299 129.73);
+  --alert-success-bg-surface: oklch(0.9624 0.0569 130.08);
+  --alert-success-bg-accent: oklch(0.7971 0.1916 139.22);
+  --alert-success-bg-strong: oklch(0.7125 0.2168 141.1);
+  --alert-success-bg-contrast: oklch(0.4138 0.1278 144.52);
+  --alert-success-border: oklch(0.3329 0 89.88 / 10%);
+  --alert-success-text: oklch(0.4138 0.1278 144.52);
+  --alert-success-icon: oklch(0.4138 0.1278 144.52);
+
+  /* ── Alert — Info ── */
+  --alert-info-bg-subtle: oklch(0.9504 0.0178 261.34);
+  --alert-info-bg-surface: oklch(0.9085 0.0413 259.65);
+  --alert-info-bg-accent: oklch(0.6234 0.1674 264.43);
+  --alert-info-bg-strong: oklch(0.5051 0.2174 263.98);
+  --alert-info-bg-contrast: oklch(0.2667 0.1442 265.47);
+  --alert-info-border: oklch(0.3329 0 89.88 / 10%);
+  --alert-info-text: oklch(0.3111 0.1611 265.45);
+  --alert-info-icon: oklch(0.4364 0.2018 264.58);
+
+  /* ── Badge / Tag — Blue ── */
+  --badge-blue-text: oklch(0.3111 0.1611 265.45);
+  --badge-blue-icon: oklch(0.5051 0.2174 263.98);
+  --badge-blue-border: oklch(0.3329 0 89.88 / 10%);
+  --badge-blue-bg-subtle: oklch(0.9504 0.0178 261.34);
+  --badge-blue-bg-surface: oklch(0.9504 0.0178 261.34);
+  --badge-blue-bg-accent: oklch(0.6234 0.1674 264.43);
+  --badge-blue-bg-strong: oklch(0.5051 0.2174 263.98);
+  --badge-blue-bg-contrast: oklch(0.2667 0.1442 265.47);
+
+  /* ── Badge / Tag — Green ── */
+  --badge-green-text: oklch(0.4138 0.1278 144.52);
+  --badge-green-icon: oklch(0.7125 0.2168 141.1);
+  --badge-green-border: oklch(0.3329 0 89.88 / 10%);
+  --badge-green-bg-subtle: oklch(0.9772 0.0299 129.73);
+  --badge-green-bg-surface: oklch(0.9772 0.0299 129.73);
+  --badge-green-bg-accent: oklch(0.7971 0.1916 139.22);
+  --badge-green-bg-strong: oklch(0.7125 0.2168 141.1);
+  --badge-green-bg-contrast: oklch(0.4138 0.1278 144.52);
+
+  /* ── Badge / Tag — Orange ── */
+  --badge-orange-text: oklch(0.4016 0.1131 45.9);
+  --badge-orange-icon: oklch(0.7549 0.174 61.29);
+  --badge-orange-border: oklch(0.3329 0 89.88 / 10%);
+  --badge-orange-bg-subtle: oklch(0.9744 0.0304 88.37);
+  --badge-orange-bg-surface: oklch(0.9744 0.0304 88.37);
+  --badge-orange-bg-accent: oklch(0.8201 0.1497 74.18);
+  --badge-orange-bg-strong: oklch(0.7549 0.174 61.29);
+  --badge-orange-bg-contrast: oklch(0.2516 0.0552 68.01);
+
+  /* ── Badge / Tag — Red ── */
+  --badge-red-text: oklch(0.3725 0.1448 18.67);
+  --badge-red-icon: oklch(0.4957 0.1944 26.32);
+  --badge-red-border: oklch(0.3329 0 89.88 / 10%);
+  --badge-red-bg-subtle: oklch(0.964 0.0219 58.79);
+  --badge-red-bg-surface: oklch(0.964 0.0219 58.79);
+  --badge-red-bg-accent: oklch(0.7234 0.1733 33.46);
+  --badge-red-bg-strong: oklch(0.4957 0.1944 26.32);
+  --badge-red-bg-contrast: oklch(0.2097 0.0755 33.95);
+
+  /* ── Badge / Tag — Gray ── */
+  --badge-gray-text: oklch(0.2686 0 89.88);
+  --badge-gray-icon: oklch(0.4748 0 89.88);
+  --badge-gray-border: oklch(0.3329 0 89.88 / 10%);
+  --badge-gray-bg-subtle: oklch(0.9761 0 89.88);
+  --badge-gray-bg-surface: oklch(1 0 89.88);
+  --badge-gray-bg-accent: oklch(0.9642 0 89.88);
+  --badge-gray-bg-strong: oklch(0.9219 0 89.88);
+  --badge-gray-bg-contrast: oklch(0.2686 0 89.88);
+}
+
+/* ─── 3. Semantic tokens — dark mode (.dark) ────────────────────────────────── */
+/* TODO: populate with dark mode token values */
+.dark {
+}
